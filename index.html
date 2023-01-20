@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn" >Generate Password</button>
+        </div>
+      </div>
+        <div class="container" id="popup">
+          <h2>What length would you like your password? </h2>
+          <div class="slidercontainer">
+            <input type="range" min="8" max="128" value="8" id="myRange" class="slider">
+            <p class="amount">Amount:<span id="amount"></span></p>
+            <button class="btn"onclick="openContainer2()">Submit</button>
+          </div>
+        </div>
+        <div class="container2"id="popup2">
+          <h2>Would you like lowercase letters?</h2>
+          <button type="Yes" class="btn" onclick="openContainer3()">Yes</button>
+          <button type="No" class="btn" onclick="openContainer3()">No</button>
+        </div>
+        <div class="container3" id="popup3">
+          <h2>Would you like UPPERCASE letters?</h2>
+          <button type="Yes" class="btn" onclick="openContainer4()">Yes</button>
+          <button type="No" class="btn" onclick="openContainer4()">No</button>
+        </div>
+        <div class="container4" id="popup4">
+          <h2>Would you like special characters?</h2>
+          <button type="Yes" class="btn" onclick="openContainer5()">Yes</button>
+          <button type="No" class="btn" onclick="openContainer5()">No</button>
+        </div>
+        <div class="container5" id="popup5">
+          <h2>Would you like numbers?</h2>
+          <button type="Yes" class="btn" onclick="generate">Yes</button>
+          <button type="No" class="btn" onclick="generate">No</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
